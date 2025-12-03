@@ -2,41 +2,47 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Viren Ghaghada | Quant Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     /* Global Styles */
     body {
       font-family: Arial, sans-serif;
-      margin: 0; padding: 0;
-      background: #f9f9f9; color: #333;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
       line-height: 1.6;
     }
 
     /* Header */
     header {
-      background: #f2f2f2;   /* very light grey */
+      background: #d3d3d3; /* light grey */
       padding: 20px;
       text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* subtle shadow */
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
+
     header h1 {
       margin: 0;
-      color: darkblue;       /* name in dark blue */
+      color: darkblue;
       font-size: 2rem;
     }
+
     nav {
       margin-top: 10px;
     }
+
     nav a {
-      color: darkgreen;      /* contact details in navy green */
+      color: darkgreen;
       margin: 0 10px;
       text-decoration: none;
       font-weight: bold;
       transition: color 0.3s ease, transform 0.2s ease;
     }
+
     nav a:hover {
-      color: #006400;        /* darker green on hover */
+      color: #006400;
       transform: scale(1.05);
     }
 
@@ -46,30 +52,33 @@
       max-width: 900px;
       margin: auto;
     }
+
     h2 {
-      color: red;            /* section headings in red */
+      color: red;
       border-bottom: 2px solid #ddd;
       padding-bottom: 5px;
       margin-top: 20px;
     }
+
     .project {
       margin-bottom: 20px;
       background: #fff;
       padding: 15px;
       border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* subtle card shadow */
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
+
     .project h3 {
       margin-top: 0;
     }
 
     /* Footer */
     footer {
-      background: #f2f2f2;   /* very light grey same as header */
+      background: #d3d3d3; /* light grey */
       color: #333;
       text-align: center;
       padding: 15px;
-      box-shadow: 0 -2px 5px rgba(0,0,0,0.1); /* subtle shadow at top */
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
     }
 
     /* Responsive Design */
@@ -89,61 +98,77 @@
 </head>
 <body>
 
-<header>
-  <h1>Viren Ghaghada</h1>
-  <nav>
-    <a href="https://www.linkedin.com/in/virenghaghada">LinkedIn</a> |
-    <a href="https://github.com/Vireng9">GitHub</a> |
-    <a href="https://vireng9.github.io">Portfolio</a> |
-    <a href="mailto:YOUR-EMAIL">Email</a>
-  </nav>
-</header>
+  <header>
+    <h1>Viren Ghaghada</h1>
+    <nav>
+      <a href="https://www.linkedin.com/in/virenghaghada" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/Vireng9" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://vireng9.github.io" target="_blank" rel="noopener noreferrer">Portfolio</a>
+      <a href="mailto:YOUR-EMAIL">Email</a>
+    </nav>
+  </header>
 
-<section>
-  <h2>My Portfolio</h2>
-  <p>
-    I’m focused on quantitative finance — Trading, Portfolio Risk Management, Optimization, Market Micro Structure.
-    Leveraging programming and statistical models to design trading strategies, risk solutions, and solve complex problems.
-    A passionate and keen learner in this evolving field.
-  </p>
-</section>
+  <section>
+    <h2>My Portfolio</h2>
+    <p>
+      I’m focused on quantitative finance — trading, portfolio risk management, optimization, and market microstructure.
+      Leveraging programming and statistical models to design trading strategies, risk solutions, and solve complex problems.
+      A passionate and keen learner in this evolving field.
+    </p>
 
-<section>
-  <h2>📂 Featured Quant Projects</h2>
+    <h2>📂 Featured Quant Projects</h2>
 
-  <div class="project">
-    <h3>📈 GJR–GARCH Volatility Modelling (OOP)</h3>
-    <p>Implemented the Glosten–Jagannathan–Runkle GARCH model to capture asymmetric volatility effects in financial time series. Designed using Object-Oriented Programming principles for modularity, scalability, and reusability.</p>
-    <ul>
-      <li>Quantitative finance & econometrics</li>
-      <li>Python programming (OOP design patterns)</li>
-      <li>Time series analysis & risk modelling</li>
-    </ul>
-  </div>
+    <div class="project">
+      <h3>📈 GJR–GARCH Volatility Modelling (OOP)</h3>
+      <p>
+        Implemented the Glosten–Jagannathan–Runkle GARCH model to capture asymmetric volatility effects in financial time series.
+        Designed using Object-Oriented Programming principles for modularity, scalability, and reusability.
+      </p>
+      <ul>
+        <li>Quantitative finance and econometrics.</li>
+        <li>Python programming with OOP design patterns.</li>
+        <li>Time series analysis and risk modelling.</li>
+      </ul>
+    </div>
 
-  <div class="project">
-    <h3>📊 Bollinger Band Function (OOP)</h3>
-    <p>Developed a reusable Bollinger Band function using Object-Oriented Programming. Designed to support dynamic parameterization and integration into trading strategy frameworks.</p>
-    <ul>
-      <li>Technical analysis & trading strategy design</li>
-      <li>Python programming (OOP principles)</li>
-      <li>Data visualization & financial analytics</li>
-    </ul>
-  </div>
-</section>
+    <div class="project">
+      <h3>📊 Bollinger Band Function (OOP)</h3>
+      <p>
+        Developed a reusable Bollinger Band function using Object-Oriented Programming.
+        Designed to support dynamic parameterization and integration into trading strategy frameworks.
+      </p>
+      <ul>
+        <li>Technical analysis and trading strategy design.</li>
+        <li>Python programming with OOP principles.</li>
+        <li>Data visualization and financial analytics.</li>
+      </ul>
+    </div>
 
-<section>
-  <h2>🌟 Objective</h2>
-  <p>
-    I’m actively pursuing quantitative finance, combining analytical rigor with programming to solve complex market problems.
-    This unique blend of experiences demonstrates analytical ability, critical thinking, adaptability, and cross-disciplinary application —
-    essential to solving complex problems and driving excellence in this dynamic field.
-  </p>
-</section>
+    <div class="project">
+      <h3>📉 Basis Trade with Repo Financing</h3>
+      <p>
+        Implemented a fixed-income relative value arbitrage strategy trading the cash–futures basis in government bonds,
+        financing the cash leg via repo to reflect realistic funding conditions.
+        Designed to analyze mispricing between futures and cost-of-carry-adjusted bond values under varying repo and special rates.
+      </p>
+      <ul>
+        <li>Modular Python framework for data ingestion, basis and carry calculations, signal generation, and PnL attribution.</li>
+        <li>Explicit modelling of general collateral and special repo rates to distinguish theoretical from realizable arbitrage.</li>
+        <li>Fixed-income relative value, arbitrage construction, and backtesting in Python with risk controls.</li>
+      </ul>
+    </div>
 
-<footer>
-  © 2025 Viren Ghaghada | Portfolio powered by GitHub Pages
-</footer>
+    <h2>🌟 Objective</h2>
+    <p>
+      I’m actively pursuing quantitative finance, combining analytical rigor with programming to solve complex market problems.
+      This unique blend of experiences demonstrates analytical ability, critical thinking, adaptability, and cross-disciplinary application —
+      essential to solving complex problems and driving excellence in this dynamic field.
+    </p>
+  </section>
+
+  <footer>
+    © 2025 Viren Ghaghada | Portfolio powered by GitHub Pages
+  </footer>
 
 </body>
 </html>
