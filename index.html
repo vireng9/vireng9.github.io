@@ -3,160 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Viren Ghaghada | Quant Portfolio</title>
+  <title>Portfolio</title>
   <style>
+    /* Page border */
     body {
-      margin-left: 0.7in;
-      margin-right: 0.7in;
-      font-family: "Segoe UI", Arial, sans-serif;
-      line-height: 1.7;
-      background-color: #ffffff;
-      color: #333333;
+      margin: 0;
+      padding: 0;
+      border: 1.5cm solid black; /* dark black border */
+      font-family: Arial, sans-serif;
     }
 
-    header, footer {
-      background-color: lightgrey;
-      padding: 20px;
+    /* Header styling */
+    header {
       text-align: center;
+      padding: 10px 0; /* reduced spacing */
     }
 
-    header h1 {
+    header nav {
       margin: 0;
-      font-size: 2.2em;
-      color: #000080; /* Dark navy blue */
-      font-weight: bold;
+      padding: 0;
     }
 
-    nav {
-      margin-top: 12px;
-    }
-
-    nav a {
-      margin: 0 12px;
+    header nav a {
       text-decoration: none;
-      color: #228B22; /* Bottle green */
-      font-weight: 600;
-      transition: color 0.3s ease;
+      color: black;
+      font-weight: bold; /* make links bold */
+      margin: 0 10px;
     }
 
-    nav a:hover {
-      color: #006400; /* Darker green on hover */
-    }
-
-    /* Dark red line 2cm below the nav links */
-    .nav-line {
-      border-top: 3px solid darkred;
+    /* Red line directly below links */
+    .red-line {
+      border-top: 3px solid red;
       width: 100%;
-      margin-top: 2cm;
-    }
-
-    main {
-      padding: 30px 0;
-    }
-
-    section {
-      margin-bottom: 40px;
-    }
-
-    h2 {
-      color: #007acc;
-      border-bottom: 2px solid #e0e0e0;
-      padding-bottom: 5px;
-    }
-
-    .projects h3 {
-      margin-top: 25px;
-      color: #444444;
-    }
-
-    ul {
-      margin: 8px 0 20px 25px;
-    }
-
-    ul li {
-      margin-bottom: 5px;
-    }
-
-    footer p {
-      margin: 0;
-      font-size: 0.9em;
-      color: #222222;
+      margin-top: 5px; /* minimal spacing */
     }
   </style>
 </head>
 <body>
-  <!-- Header -->
   <header>
-    <h1>Viren Ghaghada</h1>
     <nav>
-      <a href="https://linkedin.com/in/your-link" target="_blank">LinkedIn</a> |
-      <a href="https://github.com/vireng9" target="_blank">GitHub</a> |
-      <a href="https://vireng9.github.io" target="_blank">Portfolio</a> |
-      <a href="mailto:your-email@example.com">Email</a>
+      <a href="#">LinkedIn</a> |
+      <a href="#">GitHub</a> |
+      <a href="#">Portfolio</a> |
+      <a href="#">Email</a>
     </nav>
-    <div class="nav-line"></div>
+    <div class="red-line"></div>
   </header>
 
-  <!-- Main Content -->
   <main>
-    <section id="portfolio">
-      <h2>My Portfolio</h2>
-      <p>
-        A keen learner and passionate about quantitative finance — trading, portfolio risk management,
-        optimization, market microstructure, latency, and AI/ML applications. Leveraging quant and statistical
-        tools to design trading strategies, risk solutions, and solve complex problems.
-      </p>
-      <p>
-        This demonstrates curiosity, analytical ability, critical thinking, adaptability, and cross-disciplinary
-        application — essential to solving complex problems and driving excellence.
-      </p>
-      <p><strong>Note:</strong> For project details, visit GitHub repositories.</p>
-    </section>
-
-    <section class="projects">
-      <h2>📂 Featured Quant Projects</h2>
-
-      <h3>📈 GJR–GARCH Volatility Modelling (OOP)</h3>
-      <p>
-        Implemented the Glosten–Jagannathan–Runkle GARCH model to capture asymmetric volatility effects in
-        financial time series. Designed using Object-Oriented Programming principles for modularity,
-        scalability, and reusability.
-      </p>
-      <ul>
-        <li>Quantitative finance & econometrics</li>
-        <li>Python programming (OOP design patterns)</li>
-        <li>Time series analysis & risk modelling</li>
-      </ul>
-
-      <h3>📊 Bollinger Band Function (OOP)</h3>
-      <p>
-        Developed a reusable Bollinger Band function using Object-Oriented Programming. Designed to support
-        dynamic parameterization and integration into trading strategy frameworks.
-      </p>
-      <ul>
-        <li>Technical analysis & trading strategy design</li>
-        <li>Python programming (OOP principles)</li>
-        <li>Data visualization & financial analytics</li>
-      </ul>
-
-      <h3>📉 Basis Trade with Repo Financing</h3>
-      <p>
-        Designed and implemented a quantitative framework to exploit basis trading opportunities between cash
-        bonds and futures, financed through repurchase (repo) agreements. The project integrates fixed-income
-        pricing, repo market dynamics, and arbitrage strategy design to optimize returns under funding
-        constraints.
-      </p>
-      <ul>
-        <li>Fixed-income arbitrage & repo financing</li>
-        <li>Quantitative trading strategy development</li>
-        <li>Risk management & market microstructure analysis</li>
-      </ul>
-    </section>
+    <h1>Welcome to My Portfolio</h1>
+    <p>This is a sample content area.</p>
   </main>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Viren Ghaghada | Portfolio powered by GitHub Pages</p>
-  </footer>
 </body>
 </html>
