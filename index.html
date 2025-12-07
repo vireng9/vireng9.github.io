@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Portfolio - Viren Ghaghada</title>
   <style>
     /* Page border */
@@ -17,7 +17,8 @@
     /* Layout container – side margins now 0.3cm */
     .page-wrap {
       max-width: 1100px;
-      margin: 0.3cm auto;   /* b) left/right margins 0.3 */
+      margin: 0.3cm auto;
+      /* b) left/right margins 0.3 */
       background-color: #fdfdfd;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.04);
       border-radius: 6px;
@@ -28,6 +29,7 @@
     .header-wrapper {
       background-color: lightgrey;
       width: 100%;
+      padding-top: 0.75cm;   /* header margin: 0.75 cm */
     }
 
     /* Header styling (inside wrapper, no extra background) */
@@ -60,8 +62,7 @@
       position: relative;
       padding: 4px 2px;
       border-radius: 4px;
-      transition: color 0.25s ease, transform 0.2s ease,
-                  background-color 0.2s ease, box-shadow 0.2s ease;
+      transition: color 0.25s ease, transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
     }
 
     /* No animated underline to keep header height tight */
@@ -98,7 +99,7 @@
       color: #222;
     }
 
-    /* a) Paragraph alignment set to justify (“adjust”) */
+    /* Paragraph alignment set to justify (“adjust”) */
     main p {
       font-size: 1.05em;
       margin-bottom: 14px;
@@ -130,8 +131,7 @@
       border-left: 4px solid #000080;
       border-radius: 10px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-      transition: transform 0.18s ease, box-shadow 0.18s ease,
-                  border-color 0.18s ease, background-color 0.18s ease;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease, background-color 0.18s ease;
     }
 
     .project:hover {
@@ -150,7 +150,7 @@
     .project p {
       margin: 0 0 8px 0;
       font-size: 1.02em;
-      text-align: justify;   /* also justify project text */
+      text-align: justify; /* also justify project text */
     }
 
     .project ul {
@@ -173,6 +173,7 @@
       padding: 8px 0 6px 0;
       width: 100%;
       font-weight: bold;
+      padding-bottom: calc(8px + 0.3cm);  /* footer margin: 0.3 cm */
     }
 
     footer a {
@@ -193,16 +194,20 @@
       body {
         border-width: 0.8cm;
       }
+
       .page-wrap {
         margin: 0.3cm auto;
         border-radius: 0;
       }
+
       main {
         padding: 14px 16px 24px 16px;
       }
+
       header h1 {
         font-size: 1.8em;
       }
+
       header nav a {
         display: inline-block;
         margin: 2px 4px;
@@ -211,33 +216,31 @@
   </style>
 </head>
 <body>
-  <!-- Header: full-width grey + full-width red line -->
-  <div class="header-wrapper">
-    <header>
-      <h1>Viren Ghaghada</h1>
-      <nav>
-        <a href="https://www.linkedin.com/in/virenghaghada/" target="_blank">LinkedIn</a> |
-        <a href="https://www.github.com/Vireng9/" target="_blank">GitHub</a> |
-        <a href="https://vireng9.github.io/" target="_blank">Portfolio</a> |
-        <a href="mailto:vireng9@yahoo.com">Email</a>
-      </nav>
-    </header>
-    <div class="red-line"></div>
-  </div>
-
-  <!-- Main content within page-wrap -->
   <div class="page-wrap">
+    <div class="header-wrapper">
+      <header>
+        <h1>Viren Ghaghada</h1>
+        <nav>
+          <a href="https://www.linkedin.com/in/virenghaghada/" target="_blank">LinkedIn</a> |
+          <a href="https://www.github.com/Vireng9/" target="_blank">GitHub</a> |
+          <a href="https://vireng9.github.io/" target="_blank">Portfolio</a> |
+          <a href="mailto:vireng9@yahoo.com">Email</a>
+        </nav>
+      </header>
+      <hr class="red-line">
+    </div>
+
     <main>
       <h2>My Portfolio</h2>
+
       <p>
-        A keen learner and passionate about quantitative finance — trading, portfolio risk management,
-        optimization, market microstructure, latency, and AI/ML applications. Leveraging quantitative and
-        statistical tools to design trading strategies, risk solutions, and solve complex problems.
+        Avid learner and a Quant enthusiast — trading, portfolio risk management, optimization, market microstructure, latency, and AI/ML applications. Leveraging quant and statistical tools to design trading strategies, risk solutions, and solve complex problems.
+      </p>
+      <p>
+        Aptly demonstrating curiosity, analytical ability, critical thinking, adaptability, and cross-disciplinary application — essential to solving complex problems and driving excellence.
       </p>
       <p class="note">
-        This demonstrates curiosity, analytical ability, critical thinking, adaptability, and cross-disciplinary
-        application — essential to solving complex problems and driving excellence. <strong>Note:</strong> For
-        project details, visit GitHub repositories.
+        Note: For project details, visit GitHub repositories.
       </p>
 
       <section class="projects">
@@ -246,9 +249,7 @@
         <article class="project">
           <h4>📈 GJR–GARCH Volatility Modelling (OOP)</h4>
           <p>
-            Implemented the Glosten–Jagannathan–Runkle GARCH model to capture asymmetric volatility effects
-            in financial time series, using Object-Oriented Programming principles for modularity,
-            scalability, and reusability.
+            Implemented the Glosten–Jagannathan–Runkle GARCH model to capture asymmetric volatility effects in financial time series, using Object-Oriented Programming principles for modularity, scalability, and reusability.
           </p>
           <ul>
             <li>Quantitative finance and econometrics</li>
@@ -260,8 +261,7 @@
         <article class="project">
           <h4>📊 Bollinger Band Function (OOP)</h4>
           <p>
-            Developed a reusable Bollinger Band function using Object-Oriented Programming, supporting dynamic
-            parameterization and integration into trading strategy frameworks.
+            Developed a reusable Bollinger Band function using Object-Oriented Programming, supporting dynamic parameterization and integration into trading strategy frameworks.
           </p>
           <ul>
             <li>Technical analysis and trading strategy design</li>
@@ -273,10 +273,7 @@
         <article class="project">
           <h4>📉 Basis Trade with Repo Financing</h4>
           <p>
-            Designed and implemented a quantitative framework to exploit basis trading opportunities between
-            cash bonds and futures, financed through repurchase (repo) agreements, integrating fixed-income
-            pricing, repo market dynamics, and arbitrage strategy design to optimize returns under funding
-            constraints.
+            Designed and implemented a quantitative framework to exploit basis trading opportunities between cash bonds and futures, financed through repurchase (repo) agreements, integrating fixed-income pricing, repo market dynamics, and arbitrage strategy design to optimize returns under funding constraints.
           </p>
           <ul>
             <li>Fixed-income arbitrage and repo financing</li>
@@ -286,11 +283,10 @@
         </article>
       </section>
     </main>
-  </div>
 
-  <!-- Footer: full-width light grey, bold text -->
-  <footer>
-    © 2025 Viren Ghaghada | Portfolio powered by GitHub Pages
-  </footer>
+    <footer>
+      © 2025 Viren Ghaghada | Portfolio powered by GitHub Pages
+    </footer>
+  </div>
 </body>
 </html>
