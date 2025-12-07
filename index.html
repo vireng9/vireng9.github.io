@@ -4,186 +4,279 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio - Viren Ghaghada</title>
+
   <style>
     /* Page border */
     body {
       margin: 0;
       padding: 0;
-      border: 1.5cm solid black; /* dark black border */
+      border: 1.5cm solid black;           /* solid black, 1.5 cm thick */
       font-family: "Segoe UI", Arial, sans-serif;
       background-color: #fdfdfd;
       color: #333;
     }
 
-    /* Header styling */
+    /* Layout container for compact feel */
+    .page-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* Header styling (reduced height) */
     header {
       text-align: center;
-      padding: 10px 0; /* reduced spacing */
+      padding: 8px 0 10px 0;              /* compact header height */
     }
 
     /* Name styling */
     header h1 {
       margin: 0;
-      font-size: 2.2em;
-      color: #000080; /* dark navy blue */
+      font-size: 2.1em;
+      color: #000080;                      /* dark navy blue */
       font-weight: 700;
+      letter-spacing: 0.5px;
     }
 
     /* Navigation links */
     header nav {
-      margin-top: 5px;
+      margin-top: 4px;
+      font-size: 1.02em;
     }
 
     header nav a {
       text-decoration: none;
-      color: #006A4E; /* bottle green */
-      font-weight: bold; /* bold links */
-      margin: 0 12px;
-      font-size: 1.05em;
-      transition: color 0.3s ease, text-decoration 0.3s ease;
+      color: #006A4E;                      /* bottle green */
+      font-weight: bold;                   /* bold links */
+      margin: 0 10px;
+      position: relative;
+      transition: color 0.25s ease, transform 0.2s ease;
     }
 
-    /* Hover effect */
+    /* Smooth underline effect using pseudo-element */
+    header nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 0;
+      height: 2px;
+      background-color: #004d33;          /* darker bottle green */
+      transition: width 0.25s ease;
+    }
+
+    /* Hover effect: darken + smooth underline + slight lift */
     header nav a:hover {
-      color: #004d33;       /* darker green on hover */
-      text-decoration: underline; /* underline on hover */
+      color: #004d33;                      /* darker green on hover */
+      transform: translateY(-1px);
+    }
+
+    header nav a:hover::after {
+      width: 100%;
     }
 
     /* Dark red line below links */
     .red-line {
       border-top: 4px solid darkred;
-      width: 2cm; /* exactly 2 cm width */
-      margin: 8px auto 0 auto; /* centered, minimal spacing */
+      width: 2cm;                          /* exactly 2 cm width */
+      margin: 8px auto 0 auto;             /* centered, minimal spacing */
     }
 
-    /* Main content styling */
+    /* Main content */
     main {
-      padding: 20px 40px;
+      padding: 18px 32px 30px 32px;
       max-width: 900px;
-      margin: auto;
+      margin: 0 auto;
       line-height: 1.6;
     }
 
     main h2 {
       font-size: 1.6em;
-      margin-top: 20px;
+      margin-top: 8px;
+      margin-bottom: 10px;
       color: #222;
     }
 
     main p {
-      font-size: 1.1em;
-      margin-bottom: 15px;
+      font-size: 1.05em;
+      margin-bottom: 14px;
     }
 
-    /* Featured Projects Section */
+    /* Subtle emphasis for “Note” line */
+    .note {
+      font-size: 0.98em;
+      color: #555;
+    }
+
+    /* Featured projects section */
     .projects {
-      margin-top: 30px;
+      margin-top: 26px;
     }
 
     .projects h3 {
       font-size: 1.4em;
-      margin-bottom: 15px;
+      margin-bottom: 14px;
       color: #444;
     }
 
+    /* Project card styling */
     .project {
-      margin-bottom: 25px;
+      margin-bottom: 22px;
       background: #fafafa;
-      padding: 15px;
-      border-left: 4px solid #000080; /* accent line */
-      border-radius: 6px;
+      padding: 14px 16px 14px 18px;
+      border-left: 4px solid #000080;      /* navy accent line */
+      border-radius: 8px;                  /* rounded corners */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+
+    /* Hover effect for project cards */
+    .project:hover {
+      transform: translateY(-2px);
+      border-color: #004d33;               /* subtle color accent on hover */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     }
 
     .project h4 {
-      font-size: 1.2em;
-      margin-bottom: 8px;
+      font-size: 1.18em;
+      margin: 0 0 6px 0;
       color: #000080;
     }
 
+    .project p {
+      margin: 0 0 8px 0;
+      font-size: 1.02em;
+    }
+
     .project ul {
-      margin: 5px 0 0 20px;
+      margin: 4px 0 0 20px;
       padding: 0;
+      font-size: 0.98em;
     }
 
     .project ul li {
-      margin-bottom: 5px;
+      margin-bottom: 4px;
     }
 
     /* Footer */
     footer {
       text-align: center;
-      margin-top: 40px;
+      margin: 10px 0 6px 0;
       font-size: 0.9em;
       color: #555;
     }
+
+    footer a {
+      color: #006A4E;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.25s ease;
+    }
+
+    footer a:hover {
+      color: #004d33;
+      text-decoration: underline;
+    }
+
+    /* Responsiveness */
+    @media (max-width: 600px) {
+      body {
+        border-width: 0.8cm;
+      }
+      main {
+        padding: 14px 16px 24px 16px;
+      }
+      header h1 {
+        font-size: 1.8em;
+      }
+      header nav a {
+        display: inline-block;
+        margin: 2px 6px;
+      }
+    }
   </style>
 </head>
+
 <body>
-  <header>
-    <h1>Viren Ghaghada</h1>
-    <nav>
-      <a href="#">LinkedIn</a> |
-      <a href="#">GitHub</a> |
-      <a href="#">Portfolio</a> |
-      <a href="#">Email</a>
-    </nav>
-    <div class="red-line"></div>
-  </header>
+  <div class="page-wrap">
+    <header>
+      <h1>Viren Ghaghada</h1>
 
-  <main>
-    <h2>My Portfolio</h2>
-    <p>
-      A keen learner and passionate about quantitative finance — trading, portfolio risk management, optimization, market microstructure, latency, and AI/ML applications.  
-      Leveraging quant and statistical tools to design trading strategies, risk solutions, and solve complex problems.
-    </p>
-    <p>
-      This demonstrates curiosity, analytical ability, critical thinking, adaptability, and cross-disciplinary application — essential to solving complex problems and driving excellence.  
-      <strong>Note:</strong> For project details, visit GitHub repositories.
-    </p>
+      <nav>
+        <a href="https://www.linkedin.com/in/virenghaghada/" target="_blank" rel="noopener noreferrer">LinkedIn</a> |
+        <a href="https://www.github.com/Vireng9/" target="_blank" rel="noopener noreferrer">GitHub</a> |
+        <a href="https://vireng9.github.io/" target="_blank" rel="noopener noreferrer">Portfolio</a> |
+        <a href="mailto:vireng9@yahoo.com">Email</a>
+      </nav>
 
-    <div class="projects">
-      <h3>📂 Featured Quant Projects</h3>
+      <div class="red-line"></div>
+    </header>
 
-      <div class="project">
-        <h4>📈 GJR–GARCH Volatility Modelling (OOP)</h4>
-        <p>
-          Implemented the Glosten–Jagannathan–Runkle GARCH model to capture asymmetric volatility effects in financial time series. Designed using Object-Oriented Programming principles for modularity, scalability, and reusability.
-        </p>
-        <ul>
-          <li>Quantitative finance & econometrics</li>
-          <li>Python programming (OOP design patterns)</li>
-          <li>Time series analysis & risk modelling</li>
-        </ul>
+    <main>
+      <h2>My Portfolio</h2>
+
+      <p>
+        A keen learner and passionate about quantitative finance — trading, portfolio risk management,
+        optimization, market microstructure, latency, and AI/ML applications. Leveraging quantitative and
+        statistical tools to design trading strategies, risk solutions, and solve complex problems.
+      </p>
+
+      <p class="note">
+        This demonstrates curiosity, analytical ability, critical thinking, adaptability, and cross-disciplinary
+        application — essential to solving complex problems and driving excellence.
+        <strong>Note:</strong> For project details, visit GitHub repositories.
+      </p>
+
+      <div class="projects">
+        <h3>📂 Featured Quant Projects</h3>
+
+        <div class="project">
+          <h4>📈 GJR–GARCH Volatility Modelling (OOP)</h4>
+          <p>
+            Implemented the Glosten–Jagannathan–Runkle GARCH model to capture asymmetric volatility effects in
+            financial time series, using Object-Oriented Programming principles for modularity, scalability,
+            and reusability.
+          </p>
+          <ul>
+            <li>Quantitative finance and econometrics</li>
+            <li>Python programming (OOP design patterns)</li>
+            <li>Time series analysis and risk modelling</li>
+          </ul>
+        </div>
+
+        <div class="project">
+          <h4>📊 Bollinger Band Function (OOP)</h4>
+          <p>
+            Developed a reusable Bollinger Band function using Object-Oriented Programming, supporting dynamic
+            parameterization and integration into trading strategy frameworks.
+          </p>
+          <ul>
+            <li>Technical analysis and trading strategy design</li>
+            <li>Python programming (OOP principles)</li>
+            <li>Data visualization and financial analytics</li>
+          </ul>
+        </div>
+
+        <div class="project">
+          <h4>📉 Basis Trade with Repo Financing</h4>
+          <p>
+            Designed and implemented a quantitative framework to exploit basis trading opportunities between
+            cash bonds and futures, financed through repurchase (repo) agreements, integrating fixed-income
+            pricing, repo market dynamics, and arbitrage strategy design to optimize returns under funding
+            constraints.
+          </p>
+          <ul>
+            <li>Fixed-income arbitrage and repo financing</li>
+            <li>Quantitative trading strategy development</li>
+            <li>Risk management and market microstructure analysis</li>
+          </ul>
+        </div>
       </div>
+    </main>
 
-      <div class="project">
-        <h4>📊 Bollinger Band Function (OOP)</h4>
-        <p>
-          Developed a reusable Bollinger Band function using Object-Oriented Programming. Designed to support dynamic parameterization and integration into trading strategy frameworks.
-        </p>
-        <ul>
-          <li>Technical analysis & trading strategy design</li>
-          <li>Python programming (OOP principles)</li>
-          <li>Data visualization & financial analytics</li>
-        </ul>
-      </div>
-
-      <div class="project">
-        <h4>📉 Basis Trade with Repo Financing</h4>
-        <p>
-          Designed and implemented a quantitative framework to exploit basis trading opportunities between cash bonds and futures, financed through repurchase (repo) agreements. The project integrates fixed-income pricing, repo market dynamics, and arbitrage strategy design to optimize returns under funding constraints.
-        </p>
-        <ul>
-          <li>Fixed-income arbitrage & repo financing</li>
-          <li>Quantitative trading strategy development</li>
-          <li>Risk management & market microstructure analysis</li>
-        </ul>
-      </div>
-    </div>
-  </main>
-
-  <footer>
-    © 2025 Viren Ghaghada | Portfolio powered by GitHub Pages
-  </footer>
+    <footer>
+      © 2025 Viren Ghaghada | Portfolio powered by GitHub Pages
+    </footer>
+  </div>
 </body>
 </html>
+
