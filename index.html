@@ -14,28 +14,32 @@
       color: #333;
     }
 
-    /* Layout container – side margins now 0.3cm */
+    /* Layout container – side margins 0.3cm */
     .page-wrap {
       max-width: 1100px;
       margin: 0.3cm auto;
-      /* b) left/right margins 0.3 */
       background-color: #fdfdfd;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.04);
       border-radius: 6px;
       overflow: hidden;
     }
 
-    /* Header wrapper to ensure full-width light grey and red line */
-    .header-wrapper {
-      background-color: lightgrey;
+    /* Full-width header bar with light grey background */
+    .header-bar {
       width: 100%;
+      background-color: lightgrey;
       padding-top: 0.75cm;   /* header margin: 0.75 cm */
     }
 
-    /* Header styling (inside wrapper, no extra background) */
+    /* Inner header content constrained to page-wrap width */
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
     header {
       text-align: center;
-      padding: 8px 0 4px 0;
+      padding: 8px 32px 4px 32px;
       background-color: transparent;
     }
 
@@ -77,11 +81,12 @@
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
-    /* Red line below links – full page width */
+    /* Full-width red line directly under header bar */
     .red-line {
+      border: 0;
       border-top: 4px solid darkred;
-      margin: 0;
       width: 100%;
+      margin: 0;
     }
 
     /* Main content */
@@ -150,7 +155,7 @@
     .project p {
       margin: 0 0 8px 0;
       font-size: 1.02em;
-      text-align: justify; /* also justify project text */
+      text-align: justify;
     }
 
     .project ul {
@@ -163,17 +168,28 @@
       margin-bottom: 4px;
     }
 
-    /* Footer – full width, light grey, bold text */
+    /* Full-width footer with light grey background */
+    .footer-bar {
+      width: 100%;
+      background-color: lightgrey;
+      padding-bottom: 0.3cm;   /* footer margin: 0.3 cm */
+      padding-top: 8px;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
     footer {
       text-align: center;
       margin: 0;
       font-size: 0.9em;
       color: #555;
-      background-color: lightgrey;
-      padding: 8px 0 6px 0;
+      background-color: transparent;
+      padding: 0 32px 6px 32px;
       width: 100%;
       font-weight: bold;
-      padding-bottom: calc(8px + 0.3cm);  /* footer margin: 0.3 cm */
     }
 
     footer a {
@@ -200,6 +216,10 @@
         border-radius: 0;
       }
 
+      header {
+        padding: 8px 16px 4px 16px;
+      }
+
       main {
         padding: 14px 16px 24px 16px;
       }
@@ -212,12 +232,17 @@
         display: inline-block;
         margin: 2px 4px;
       }
+
+      footer {
+        padding: 0 16px 6px 16px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="page-wrap">
-    <div class="header-wrapper">
+  <!-- Full-width header -->
+  <div class="header-bar">
+    <div class="header-inner">
       <header>
         <h1>Viren Ghaghada</h1>
         <nav>
@@ -227,9 +252,13 @@
           <a href="mailto:vireng9@yahoo.com">Email</a>
         </nav>
       </header>
-      <hr class="red-line">
     </div>
+  </div>
 
+  <!-- Full-width red line -->
+  <hr class="red-line">
+
+  <div class="page-wrap">
     <main>
       <h2>My Portfolio</h2>
 
@@ -283,10 +312,15 @@
         </article>
       </section>
     </main>
+  </div>
 
-    <footer>
-      © 2025 Viren Ghaghada | Portfolio powered by GitHub Pages
-    </footer>
+  <!-- Full-width footer -->
+  <div class="footer-bar">
+    <div class="footer-inner">
+      <footer>
+        © 2025 Viren Ghaghada | Portfolio powered by GitHub Pages
+      </footer>
+    </div>
   </div>
 </body>
 </html>
